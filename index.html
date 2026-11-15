@@ -1,1 +1,680 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TruWays Logistics provides road freight, transport, local deliveries and customised logistics solutions across South Africa.">
+  <title>TruWays Logistics | Moving Your Business Forward</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172b3b;
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    :root {
+      --navy: #102c46;
+      --blue: #1766a5;
+      --orange: #ef9b35;
+      --light: #f3f6f9;
+    }
+
+    a { text-decoration: none; }
+
+    .topbar {
+      background: var(--navy);
+      color: white;
+      padding: 9px 7%;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    header {
+      background: white;
+      padding: 17px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 3px 12px #00000012;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: 1px;
+    }
+
+    .logo span { color: var(--orange); }
+
+    .logo small {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: var(--blue);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover { color: var(--orange); }
+
+    .btn {
+      display: inline-block;
+      background: var(--orange);
+      color: #172b3b;
+      padding: 13px 23px;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .btn:hover {
+      background: #ffb957;
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      background:
+        linear-gradient(90deg, #0b243bea 0%, #102c46d9 52%, #102c4670 100%),
+        url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content { max-width: 700px; }
+
+    .eyebrow {
+      color: var(--orange);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 65px);
+      line-height: 1.12;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 580px;
+      color: #e5edf4;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      padding: 85px 8%;
+    }
+
+    .section-title {
+      font-size: 35px;
+      color: var(--navy);
+      margin-bottom: 15px;
+    }
+
+    .section-intro {
+      max-width: 700px;
+      color: #627181;
+      margin-bottom: 38px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      min-height: 350px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .about-text p {
+      color: #596a79;
+      margin: 15px 0;
+    }
+
+    .highlight {
+      border-left: 4px solid var(--orange);
+      padding: 15px 20px;
+      background: var(--light);
+      margin-top: 22px;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .value {
+      padding: 20px;
+      background: var(--light);
+      border-radius: 6px;
+    }
+
+    .value strong { color: var(--blue); }
+
+    .services {
+      background: var(--light);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px;
+      border-radius: 7px;
+      border-bottom: 4px solid var(--orange);
+      box-shadow: 0 5px 20px #102c460c;
+    }
+
+    .service-icon {
+      font-size: 34px;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .service-card p { color: #657382; }
+
+    .fleet-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .fleet-card {
+      padding: 27px;
+      border: 1px solid #e1e7ed;
+      border-radius: 7px;
+    }
+
+    .fleet-card h3 {
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .fleet-card ul {
+      padding-left: 20px;
+      color: #637181;
+    }
+
+    .fleet-card li { margin-bottom: 7px; }
+
+    .banner {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 70px 8%;
+    }
+
+    .banner h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .banner p {
+      color: #d4e0e9;
+      margin-bottom: 25px;
+    }
+
+    .contact {
+      background: var(--light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info {
+      background: var(--navy);
+      color: white;
+      padding: 35px;
+      border-radius: 7px;
+    }
+
+    .contact-info h3 {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin: 17px 0;
+      color: #e2ebf2;
+    }
+
+    .contact-info a { color: var(--orange); }
+
+    .contact-form {
+      background: white;
+      padding: 30px;
+      border-radius: 7px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px;
+      margin: 9px 0 15px;
+      border: 1px solid #d9e0e7;
+      border-radius: 4px;
+      font: inherit;
+    }
+
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      border: 0;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    footer {
+      background: #0a1e30;
+      color: white;
+      padding: 30px 8%;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer p { color: #b9c7d2; margin: 7px; }
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      background: #20b96b;
+      color: white;
+      padding: 14px 19px;
+      border-radius: 40px;
+      font-weight: bold;
+      z-index: 20;
+      box-shadow: 0 4px 15px #0003;
+    }
+
+    @media(max-width: 800px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 13px;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid,
+      .fleet-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .values { grid-template-columns: 1fr; }
+
+      .hero { min-height: 500px; }
+      .section { padding: 60px 6%; }
+      .topbar { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <span>📍 Kempton Park, Gauteng, South Africa</span>
+    <span>📞 067 131 1009 | ✉ paul@truways.co.za</span>
+  </div>
+
+  <header>
+    <a href="#home" class="logo">
+      TRU<span>WAYS</span>
+      <small>LOGISTICS</small>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#fleet">Our Fleet</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="eyebrow">Your Logistics Partner</div>
+      <h1>Moving Your Business Forward.</h1>
+      <p>
+        Reliable transport, road freight and delivery solutions
+        designed around your business. Connecting people,
+        businesses and destinations across South Africa.
+      </p>
+      <a href="#contact" class="btn">Request a Quote →</a>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="about-grid">
+      <div>
+        <div class="eyebrow">Who We Are</div>
+        <h2 class="section-title">Logistics That Move You Forward</h2>
+        <div class="about-text">
+          <p>
+            TruWays Logistics (Pty) Ltd is a privately owned
+            logistics company established to provide exceptional
+            logistics solutions.
+          </p>
+          <p>
+            We are committed to delivering customised and
+            efficient solutions that help our customers move
+            forward, while maintaining high standards of service,
+            safety and compliance.
+          </p>
+          <p>
+            TruWays is a 100% black-owned business with
+            B-BBEE Level 1 accreditation.
+          </p>
+        </div>
+
+        <div class="highlight">
+          <strong>Our Mission</strong>
+          <p>To become the preferred logistics solution partner
+          for individuals and organisations.</p>
+        </div>
+      </div>
+
+      <div>
+        <img class="about-image"
+          src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1000&q=85"
+          alt="Logistics and freight operations">
+      </div>
+    </div>
+
+    <div style="margin-top:60px">
+      <h2 class="section-title">Our Vision & Values</h2>
+      <p class="section-intro">
+        Providing customised logistical solutions and value-added
+        services while delivering an exceptional experience for our clients.
+      </p>
+
+      <div class="values">
+        <div class="value">
+          <strong>Excellence in Delivery</strong>
+          <p>We strive to uphold high standards in every delivery.</p>
+        </div>
+        <div class="value">
+          <strong>Compliance</strong>
+          <p>We are committed to safety and relevant regulatory frameworks.</p>
+        </div>
+        <div class="value">
+          <strong>Service to Community</strong>
+          <p>We aim to contribute positively to our communities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="eyebrow">What We Do</div>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-intro">
+      Practical and customised logistics solutions to support
+      businesses and individuals across South Africa.
+    </p>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon">🚛</div>
+        <h3>Road Freight & Transport</h3>
+        <p>Dependable road transport solutions for your business
+        and cargo requirements.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📦</div>
+        <h3>Local & Door-to-Door Delivery</h3>
+        <p>Local delivery and convenient door-to-door services
+        to get goods where they need to be.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🚚</div>
+        <h3>Courier & Deliveries</h3>
+        <p>Delivery solutions designed to support your
+        day-to-day business operations.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌍</div>
+        <h3>Clearing & Forwarding</h3>
+        <p>Logistics support for clearing and forwarding
+        requirements.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📦</div>
+        <h3>Wrapping & Packaging</h3>
+        <p>Packaging and wrapping support to help prepare
+        goods for transportation.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🤝</div>
+        <h3>Customised Solutions</h3>
+        <p>Flexible logistics solutions tailored to your
+        operational and delivery needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="fleet">
+    <div class="eyebrow">Our Capabilities</div>
+    <h2 class="section-title">Our Fleet</h2>
+    <p class="section-intro">
+      A fleet equipped to support a range of freight and
+      transportation requirements.
+    </p>
+
+    <div class="fleet-grid">
+      <div class="fleet-card">
+        <h3>Scania G 460 XT</h3>
+        <ul>
+          <li>Tri-axle configuration</li>
+          <li>24-ton capacity</li>
+          <li>12m trailer</li>
+          <li>Flat deck trailer</li>
+        </ul>
+      </div>
+
+      <div class="fleet-card">
+        <h3>Isuzu FTR 850 LWB</h3>
+        <ul>
+          <li>8-ton capacity</li>
+          <li>Tautliner body</li>
+          <li>8.5m high-volume body</li>
+          <li>Double-stack pallet capability</li>
+          <li>Anti-theft canvas mesh</li>
+        </ul>
+      </div>
+
+      <div class="fleet-card">
+        <h3>UD Croner LKE 250</h3>
+        <ul>
+          <li>8-ton capacity</li>
+          <li>Curtain-side body</li>
+          <li>6.2m volume body</li>
+          <li>Tail lift</li>
+          <li>Roll-a-floor pallet system</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="highlight" style="margin-top:30px">
+      <strong>Safety & Compliance</strong>
+      <p>Goods in Transit (GIT) insurance of R875,000 and
+      Dangerous Goods Regulations (DGR) compliance,
+      as stated in our company profile.</p>
+    </div>
+  </section>
+
+  <section class="banner">
+    <h2>Let's Move Your Business Forward.</h2>
+    <p>Looking for a dependable logistics partner?
+    Let's discuss your transport and delivery needs.</p>
+    <a href="#contact" class="btn">Talk to Our Team</a>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="eyebrow">Get In Touch</div>
+    <h2 class="section-title">Let's Talk Logistics</h2>
+    <p class="section-intro">
+      Contact our team to discuss your requirements or request a quote.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p>📍 37 Dundlin, Terenure Drive,<br>
+        Kempton Park, Gauteng,<br>South Africa</p>
+
+        <p>📞 Paul Landa: <a href="tel:+27671311009">067 131 1009</a></p>
+        <p>📞 Patricia Mulei: <a href="tel:+27633753299">063 375 3299</a></p>
+        <p>✉ <a href="mailto:paul@truways.co.za">paul@truways.co.za</a></p>
+        <p>✉ <a href="mailto:finance@truways.co.za">finance@truways.co.za</a></p>
+
+        <p><strong>Company Registration:</strong><br>
+        2021/1366568/07</p>
+
+        <p><strong>Coverage:</strong><br>South Africa</p>
+      </div>
+
+      <div class="contact-form">
+        <h3>Request a Quote</h3>
+        <form id="quoteForm">
+          <label for="name">Your Name</label>
+          <input id="name" name="name" type="text"
+            placeholder="Enter your name" required>
+
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email"
+            placeholder="Enter your email" required>
+
+          <label for="phone">Contact Number</label>
+          <input id="phone" name="phone" type="tel"
+            placeholder="Enter your number">
+
+          <label for="message">How can we assist?</label>
+          <textarea id="message" name="message"
+            placeholder="Tell us about your transport or delivery requirements..."
+            required></textarea>
+
+          <button class="btn" type="submit">Send Enquiry →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="logo" style="color:white">
+      TRU<span>WAYS</span>
+      <small style="color:#dce6ef">LOGISTICS</small>
+    </div>
+    <p>Moving Your Business Forward.</p>
+    <p>© <span id="year"></span> TruWays Logistics (Pty) Ltd.
+    All rights reserved.</p>
+    <p>100% Black-Owned | B-BBEE Level 1</p>
+  </footer>
+
+  <a class="whatsapp"
+    href="https://wa.me/27671311009?text=Hello%20TruWays%20Logistics%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+    target="_blank" rel="noopener">
+    WhatsApp Us
+  </a>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("quoteForm").addEventListener("submit",
+      function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+
+        const subject = encodeURIComponent("Website Quote Enquiry");
+        const body = encodeURIComponent(
+          "Name: " + name +
+          "\nEmail: " + email +
+          "\nPhone: " + phone +
+          "\n\nEnquiry: " + message
+        );
+
+        window.location.href =
+          "mailto:paul@truways.co.za?subject=" +
+          subject + "&body=" + body;
+      }
+    );
+  </script>
+
+</body>
+</html>
+
