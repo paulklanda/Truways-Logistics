@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-
   <!-- ==========================================
        1. WEBSITE SETTINGS
        ========================================== -->
@@ -56,11 +55,6 @@
 
     /* ==========================================
        3. OFFICIAL TRUWAYS COLOURS
-
-       GREEN: #33CC33
-       BLACK: #000000
-       WHITE: #FFFFFF
-
        ========================================== */
 
     :root {
@@ -74,17 +68,22 @@
 
 
     /* ==========================================
-       4. ACTUAL COMPANY LOGO
+       4. COMPANY LOGO
 
        IMPORTANT:
-       Upload truways-logo.png into the same
-       GitHub folder as this index.html file.
+       Upload your logo into the same folder
+       as index.html.
+
+       Recommended filename:
+       truways-logo.png
 
        ========================================== */
 
     .logo-image {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       flex-shrink: 0;
+      min-width: 180px;
     }
 
     .logo-image img {
@@ -94,9 +93,50 @@
       object-fit: contain;
     }
 
+    /* Fallback logo if image cannot load */
+
+    .logo-fallback {
+      display: none;
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--black);
+      line-height: 1.1;
+    }
+
+    .logo-fallback .tru {
+      color: var(--black);
+    }
+
+    .logo-fallback .ways {
+      color: var(--green);
+    }
+
+    .logo-fallback small {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 5px;
+      color: var(--black);
+    }
+
+    .footer-logo {
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
     .footer-logo img {
       width: 210px;
-      margin: 0 auto 15px;
+      max-height: 100px;
+      object-fit: contain;
+    }
+
+    /* Footer fallback must be visible if image fails */
+
+    .footer-logo .logo-fallback {
+      color: var(--white);
+    }
+
+    .footer-logo .logo-fallback small {
+      color: var(--white);
     }
 
 
@@ -583,7 +623,6 @@
 
     }
 
-
     @media (max-width: 480px) {
 
       nav a {
@@ -616,7 +655,6 @@
 
 <body>
 
-
   <!-- ==========================================
        20. TOP CONTACT BAR
        ========================================== -->
@@ -630,13 +668,8 @@
   </div>
 
 
-
   <!-- ==========================================
-       21. HEADER WITH ORIGINAL COMPANY LOGO
-
-       The image file must be named:
-       truways-logo.png
-
+       21. HEADER WITH COMPANY LOGO
        ========================================== -->
 
   <header>
@@ -644,9 +677,17 @@
     <a href="#home" class="logo-image" aria-label="TruWays Logistics Home">
 
       <img
-        src="truways-logo.png"
+        src="./truways-logo.png"
         alt="TruWays Logistics - Yours Truly"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
       >
+
+      <!-- FALLBACK LOGO -->
+
+      <span class="logo-fallback">
+        <span class="tru">Tru</span><span class="ways">Ways</span>
+        <small>LOGISTICS</small>
+      </span>
 
     </a>
 
@@ -668,7 +709,6 @@
     </nav>
 
   </header>
-
 
 
   <!-- ==========================================
@@ -694,7 +734,6 @@
     </div>
 
   </section>
-
 
 
   <!-- ==========================================
@@ -815,7 +854,6 @@
   </section>
 
 
-
   <!-- ==========================================
        24. SERVICES SECTION
        ========================================== -->
@@ -833,94 +871,63 @@
 
     <div class="service-grid">
 
-
       <div class="service-card">
-
         <div class="service-icon">🚛</div>
-
         <h3>Road Freight & Transport</h3>
-
         <p>
           Dependable road transport solutions for your business
           and cargo requirements.
         </p>
-
       </div>
 
-
       <div class="service-card">
-
         <div class="service-icon">📦</div>
-
         <h3>Local & Door-to-Door Delivery</h3>
-
         <p>
           Local delivery and convenient door-to-door services
           to get goods where they need to be.
         </p>
-
       </div>
 
-
       <div class="service-card">
-
         <div class="service-icon">🚚</div>
-
         <h3>Courier & Deliveries</h3>
-
         <p>
           Delivery solutions designed to support your
           day-to-day business operations.
         </p>
-
       </div>
 
-
       <div class="service-card">
-
         <div class="service-icon">🌍</div>
-
         <h3>Clearing & Forwarding</h3>
-
         <p>
           Logistics support for clearing and forwarding
           requirements.
         </p>
-
       </div>
 
-
       <div class="service-card">
-
         <div class="service-icon">📦</div>
-
         <h3>Wrapping & Packaging</h3>
-
         <p>
           Packaging and wrapping support to help prepare
           goods for transportation.
         </p>
-
       </div>
 
-
       <div class="service-card">
-
         <div class="service-icon">🤝</div>
-
         <h3>Customised Solutions</h3>
-
         <p>
           Flexible logistics solutions tailored to your
           operational and delivery needs.
         </p>
-
       </div>
 
     </div>
 
   </section>
-
 
 
   <!-- ==========================================
@@ -940,63 +947,43 @@
 
     <div class="fleet-grid">
 
-
       <div class="fleet-card">
 
         <h3>Scania G 460 XT</h3>
 
         <ul>
-
           <li>Tri-axle configuration</li>
-
           <li>24-ton capacity</li>
-
           <li>12m trailer</li>
-
           <li>Flat deck trailer</li>
-
         </ul>
 
       </div>
-
 
       <div class="fleet-card">
 
         <h3>Isuzu FTR 850 LWB</h3>
 
         <ul>
-
           <li>8-ton capacity</li>
-
           <li>Tautliner body</li>
-
           <li>8.5m high-volume body</li>
-
           <li>Double-stack pallet capability</li>
-
           <li>Anti-theft canvas mesh</li>
-
         </ul>
 
       </div>
-
 
       <div class="fleet-card">
 
         <h3>UD Croner LKE 250</h3>
 
         <ul>
-
           <li>8-ton capacity</li>
-
           <li>Curtain-side body</li>
-
           <li>6.2m volume body</li>
-
           <li>Tail lift</li>
-
           <li>Roll-a-floor pallet system</li>
-
         </ul>
 
       </div>
@@ -1021,7 +1008,6 @@
   </section>
 
 
-
   <!-- ==========================================
        26. PROMOTIONAL BANNER
        ========================================== -->
@@ -1038,7 +1024,6 @@
     <a href="#contact" class="btn">Talk to Our Team</a>
 
   </section>
-
 
 
   <!-- ==========================================
@@ -1107,7 +1092,6 @@
       </div>
 
 
-
       <!-- ======================================
            28. REQUEST A QUOTE FORM
            ====================================== -->
@@ -1169,9 +1153,8 @@
   </section>
 
 
-
   <!-- ==========================================
-       29. FOOTER WITH ORIGINAL COMPANY LOGO
+       29. FOOTER WITH COMPANY LOGO
        ========================================== -->
 
   <footer>
@@ -1179,10 +1162,18 @@
     <a href="#home" class="logo-image footer-logo">
 
       <img
-        src="truways-logo.png"
+        src="./truways-logo.png"
         alt="TruWays Logistics - Yours Truly"
         loading="lazy"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
       >
+
+      <!-- FALLBACK FOOTER LOGO -->
+
+      <span class="logo-fallback">
+        <span class="tru">Tru</span><span class="ways">Ways</span>
+        <small>LOGISTICS</small>
+      </span>
 
     </a>
 
@@ -1196,7 +1187,6 @@
     <p>100% Black-Owned | B-BBEE Level 1</p>
 
   </footer>
-
 
 
   <!-- ==========================================
@@ -1216,7 +1206,6 @@
   </a>
 
 
-
   <!-- ==========================================
        31. JAVASCRIPT
        ========================================== -->
@@ -1232,10 +1221,8 @@
     /* ==========================================
        ENQUIRY FORM
 
-       This opens the visitor's default email app.
-       It does not send directly from the website.
-
-       EDIT THE RECIPIENT EMAIL BELOW IF REQUIRED.
+       Opens the visitor's default email application.
+       Does not send directly from the website.
 
        ========================================== */
 
@@ -1258,11 +1245,9 @@
         const message =
           document.getElementById("message").value.trim();
 
-
         const subject = encodeURIComponent(
           "Website Quote Enquiry - TruWays Logistics"
         );
-
 
         const body = encodeURIComponent(
 
@@ -1276,7 +1261,6 @@
 
         );
 
-
         window.location.href =
           "mailto:paul@truways.co.za?subject=" +
           subject + "&body=" + body;
@@ -1286,7 +1270,6 @@
     );
 
   </script>
-
 
 </body>
 
