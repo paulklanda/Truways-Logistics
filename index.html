@@ -19,12 +19,12 @@
 
 
   <!-- ==========================================
-       2. WEBSITE DESIGN / CSS
+       2. WEBSITE STYLING
        ========================================== -->
 
   <style>
 
-    /* RESET DEFAULT BROWSER SPACING */
+    /* RESET */
 
     * {
       margin: 0;
@@ -37,41 +37,11 @@
       scroll-padding-top: 100px;
     }
 
-
-    /* ==========================================
-       3. OFFICIAL TRUWAYS CORPORATE COLOURS
-
-       TRU = BLACK
-       WAYS = GREEN
-       LOGISTICS = BLACK
-
-       ========================================== */
-
-    :root {
-
-      --green: #33CC33;
-      --black: #000000;
-      --white: #FFFFFF;
-
-      --light: #F5F5F5;
-      --text: #000000;
-      --muted: #666666;
-      --border: #DDDDDD;
-
-      --green-hover: #28A428;
-
-    }
-
-
-    /* ==========================================
-       4. GENERAL WEBSITE SETTINGS
-       ========================================== */
-
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
+      color: #000000;
       line-height: 1.6;
-      background: var(--white);
+      background: #FFFFFF;
     }
 
     a {
@@ -85,52 +55,53 @@
 
 
     /* ==========================================
-       5. TRUWAYS COMPANY LOGO
+       3. OFFICIAL TRUWAYS COLOURS
 
-       TRU = BLACK
-       WAYS = GREEN
-       LOGISTICS = BLACK
+       GREEN: #33CC33
+       BLACK: #000000
+       WHITE: #FFFFFF
 
        ========================================== */
 
-    .logo {
-      display: inline-block;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 32px;
-      font-weight: 900;
-      color: var(--black);
-      letter-spacing: 1px;
-      line-height: 1.1;
-      white-space: nowrap;
-    }
-
-    /* TRU IS BLACK */
-
-    .logo .tru {
-      color: var(--black);
-    }
-
-    /* WAYS IS GREEN */
-
-    .logo .ways {
-      color: var(--green);
-    }
-
-    /* LOGISTICS UNDER COMPANY NAME */
-
-    .logo small {
-      display: block;
-      font-size: 10px;
-      letter-spacing: 5px;
-      color: var(--black);
-      font-weight: bold;
-      margin-top: 4px;
+    :root {
+      --green: #33CC33;
+      --black: #000000;
+      --white: #FFFFFF;
+      --light: #F5F5F5;
+      --grey: #666666;
+      --border: #DDDDDD;
     }
 
 
     /* ==========================================
-       6. TOP CONTACT BAR
-       EDIT: LOCATION AND CONTACT DETAILS
+       4. ACTUAL COMPANY LOGO
+
+       IMPORTANT:
+       Upload truways-logo.png into the same
+       GitHub folder as this index.html file.
+
+       ========================================== */
+
+    .logo-image {
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .logo-image img {
+      width: 230px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .footer-logo img {
+      width: 210px;
+      margin: 0 auto 15px;
+    }
+
+
+    /* ==========================================
+       5. TOP CONTACT BAR
        ========================================== */
 
     .topbar {
@@ -148,7 +119,7 @@
 
 
     /* ==========================================
-       7. WEBSITE HEADER / NAVIGATION
+       6. HEADER AND NAVIGATION
        ========================================== */
 
     header {
@@ -177,7 +148,7 @@
       color: var(--black);
       font-weight: 600;
       font-size: 14px;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     nav a:hover {
@@ -186,41 +157,36 @@
 
 
     /* ==========================================
-       8. BUTTON DESIGN
+       7. BUTTONS
        ========================================== */
 
     .btn {
       display: inline-block;
       background: var(--green);
       color: var(--black);
-
       padding: 13px 23px;
       border-radius: 4px;
-
       font-weight: bold;
-      transition: .2s;
+      transition: 0.2s;
       border: none;
       cursor: pointer;
     }
 
     .btn:hover {
-      background: var(--green-hover);
+      background: #28A428;
       color: var(--white);
       transform: translateY(-2px);
     }
 
 
     /* ==========================================
-       9. HOMEPAGE / HERO SECTION
-       EDIT: BACKGROUND IMAGE URL HERE
+       8. HERO / HOMEPAGE SECTION
        ========================================== */
 
     .hero {
       min-height: 570px;
-
       display: flex;
       align-items: center;
-
       padding: 80px 8%;
 
       background:
@@ -264,7 +230,7 @@
 
 
     /* ==========================================
-       10. GENERAL CONTENT SECTIONS
+       9. GENERAL SECTIONS
        ========================================== */
 
     .section {
@@ -279,13 +245,13 @@
 
     .section-intro {
       max-width: 700px;
-      color: var(--muted);
+      color: var(--grey);
       margin-bottom: 38px;
     }
 
 
     /* ==========================================
-       11. ABOUT US SECTION
+       10. ABOUT US
        ========================================== */
 
     .about-grid {
@@ -303,7 +269,7 @@
     }
 
     .about-text p {
-      color: var(--muted);
+      color: var(--grey);
       margin: 15px 0;
     }
 
@@ -316,7 +282,7 @@
 
 
     /* ==========================================
-       12. COMPANY VALUES
+       11. COMPANY VALUES
        ========================================== */
 
     .values {
@@ -339,7 +305,7 @@
 
 
     /* ==========================================
-       13. SERVICES SECTION
+       12. SERVICES
        ========================================== */
 
     .services {
@@ -358,7 +324,7 @@
       border-radius: 7px;
       border-bottom: 4px solid var(--green);
       box-shadow: 0 5px 20px #0000000C;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     .service-card:hover {
@@ -377,12 +343,12 @@
     }
 
     .service-card p {
-      color: var(--muted);
+      color: var(--grey);
     }
 
 
     /* ==========================================
-       14. FLEET SECTION
+       13. OUR FLEET
        ========================================== */
 
     .fleet-grid {
@@ -406,7 +372,7 @@
 
     .fleet-card ul {
       padding-left: 20px;
-      color: var(--muted);
+      color: var(--grey);
     }
 
     .fleet-card li {
@@ -415,7 +381,7 @@
 
 
     /* ==========================================
-       15. PROMOTIONAL BANNER
+       14. PROMOTIONAL BANNER
        ========================================== */
 
     .banner {
@@ -437,7 +403,7 @@
 
 
     /* ==========================================
-       16. CONTACT SECTION
+       15. CONTACT SECTION
        ========================================== */
 
     .contact {
@@ -477,7 +443,7 @@
 
 
     /* ==========================================
-       17. QUOTATION / ENQUIRY FORM
+       16. ENQUIRY FORM
        ========================================== */
 
     .contact-form {
@@ -502,10 +468,8 @@
       width: 100%;
       padding: 14px;
       margin: 9px 0 15px;
-
       border: 1px solid var(--border);
       border-radius: 4px;
-
       font: inherit;
     }
 
@@ -523,16 +487,12 @@
 
 
     /* ==========================================
-       18. WEBSITE FOOTER
-       TRU = WHITE
-       WAYS = GREEN
-       LOGISTICS = WHITE
+       17. FOOTER
        ========================================== */
 
     footer {
       background: var(--black);
       color: var(--white);
-
       padding: 35px 8%;
       text-align: center;
       font-size: 13px;
@@ -543,32 +503,9 @@
       margin: 7px;
     }
 
-    /* Footer TRU must be white */
-
-    footer .logo .tru {
-      color: var(--white);
-    }
-
-    /* Footer WAYS must remain green */
-
-    footer .logo .ways {
-      color: var(--green);
-    }
-
-    /* Footer LOGISTICS must be white */
-
-    footer .logo small {
-      color: var(--white);
-    }
-
-    .footer-logo {
-      margin-bottom: 15px;
-    }
-
 
     /* ==========================================
-       19. WHATSAPP FLOATING BUTTON
-       EDIT: WHATSAPP NUMBER IN HTML BELOW
+       18. WHATSAPP FLOATING BUTTON
        ========================================== */
 
     .whatsapp {
@@ -586,7 +523,7 @@
       z-index: 200;
 
       box-shadow: 0 4px 15px #00000033;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     .whatsapp:hover {
@@ -596,14 +533,18 @@
 
 
     /* ==========================================
-       20. MOBILE RESPONSIVENESS
+       19. MOBILE RESPONSIVENESS
        ========================================== */
 
-    @media(max-width: 800px) {
+    @media (max-width: 800px) {
 
       header {
         flex-direction: column;
         gap: 15px;
+      }
+
+      .logo-image img {
+        width: 200px;
       }
 
       nav {
@@ -642,11 +583,8 @@
 
     }
 
-    @media(max-width: 480px) {
 
-      .logo {
-        font-size: 28px;
-      }
+    @media (max-width: 480px) {
 
       nav a {
         font-size: 13px;
@@ -680,8 +618,7 @@
 
 
   <!-- ==========================================
-       21. TOP CONTACT BAR
-       EDIT: LOCATION AND CONTACT DETAILS
+       20. TOP CONTACT BAR
        ========================================== -->
 
   <div class="topbar">
@@ -695,26 +632,26 @@
 
 
   <!-- ==========================================
-       22. WEBSITE HEADER AND LOGO
+       21. HEADER WITH ORIGINAL COMPANY LOGO
 
-       TRU = BLACK
-       WAYS = GREEN
-       LOGISTICS = BLACK
+       The image file must be named:
+       truways-logo.png
 
        ========================================== -->
 
   <header>
 
-    <a href="#home" class="logo" aria-label="TruWays Logistics Home">
+    <a href="#home" class="logo-image" aria-label="TruWays Logistics Home">
 
-      <span class="tru">TRU</span><span class="ways">WAYS</span>
-
-      <small>LOGISTICS</small>
+      <img
+        src="truways-logo.png"
+        alt="TruWays Logistics - Yours Truly"
+      >
 
     </a>
 
 
-    <!-- NAVIGATION LINKS -->
+    <!-- WEBSITE NAVIGATION -->
 
     <nav aria-label="Main navigation">
 
@@ -735,8 +672,7 @@
 
 
   <!-- ==========================================
-       23. HOMEPAGE / HERO SECTION
-       EDIT: HEADING AND BACKGROUND IMAGE
+       22. HOMEPAGE / HERO SECTION
        ========================================== -->
 
   <section class="hero" id="home">
@@ -762,7 +698,7 @@
 
 
   <!-- ==========================================
-       24. ABOUT US SECTION
+       23. ABOUT US SECTION
        ========================================== -->
 
   <section class="section" id="about">
@@ -813,7 +749,7 @@
       </div>
 
 
-      <!-- EDIT: ABOUT US IMAGE URL -->
+      <!-- ABOUT US IMAGE -->
 
       <div>
 
@@ -821,15 +757,15 @@
           class="about-image"
           src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1000&q=85"
           alt="Logistics and freight operations"
-          loading="lazy">
+          loading="lazy"
+        >
 
       </div>
 
     </div>
 
 
-
-    <!-- COMPANY VISION AND VALUES -->
+    <!-- COMPANY VALUES -->
 
     <div style="margin-top:60px">
 
@@ -881,7 +817,7 @@
 
 
   <!-- ==========================================
-       25. SERVICES SECTION
+       24. SERVICES SECTION
        ========================================== -->
 
   <section class="section services" id="services">
@@ -898,8 +834,6 @@
     <div class="service-grid">
 
 
-      <!-- SERVICE 1 -->
-
       <div class="service-card">
 
         <div class="service-icon">🚛</div>
@@ -913,8 +847,6 @@
 
       </div>
 
-
-      <!-- SERVICE 2 -->
 
       <div class="service-card">
 
@@ -930,8 +862,6 @@
       </div>
 
 
-      <!-- SERVICE 3 -->
-
       <div class="service-card">
 
         <div class="service-icon">🚚</div>
@@ -945,8 +875,6 @@
 
       </div>
 
-
-      <!-- SERVICE 4 -->
 
       <div class="service-card">
 
@@ -962,8 +890,6 @@
       </div>
 
 
-      <!-- SERVICE 5 -->
-
       <div class="service-card">
 
         <div class="service-icon">📦</div>
@@ -977,8 +903,6 @@
 
       </div>
 
-
-      <!-- SERVICE 6 -->
 
       <div class="service-card">
 
@@ -1000,7 +924,7 @@
 
 
   <!-- ==========================================
-       26. FLEET SECTION
+       25. OUR FLEET
        ========================================== -->
 
   <section class="section" id="fleet">
@@ -1016,8 +940,6 @@
 
     <div class="fleet-grid">
 
-
-      <!-- VEHICLE 1 -->
 
       <div class="fleet-card">
 
@@ -1037,8 +959,6 @@
 
       </div>
 
-
-      <!-- VEHICLE 2 -->
 
       <div class="fleet-card">
 
@@ -1060,8 +980,6 @@
 
       </div>
 
-
-      <!-- VEHICLE 3 -->
 
       <div class="fleet-card">
 
@@ -1105,7 +1023,7 @@
 
 
   <!-- ==========================================
-       27. PROMOTIONAL BANNER
+       26. PROMOTIONAL BANNER
        ========================================== -->
 
   <section class="banner">
@@ -1124,7 +1042,7 @@
 
 
   <!-- ==========================================
-       28. CONTACT SECTION
+       27. CONTACT SECTION
        ========================================== -->
 
   <section class="section contact" id="contact">
@@ -1191,7 +1109,7 @@
 
 
       <!-- ======================================
-           29. QUOTATION / ENQUIRY FORM
+           28. REQUEST A QUOTE FORM
            ====================================== -->
 
       <div class="contact-form">
@@ -1253,21 +1171,20 @@
 
 
   <!-- ==========================================
-       30. WEBSITE FOOTER
-       TRU = WHITE
-       WAYS = GREEN
-       LOGISTICS = WHITE
+       29. FOOTER WITH ORIGINAL COMPANY LOGO
        ========================================== -->
 
   <footer>
 
-    <div class="logo footer-logo">
+    <a href="#home" class="logo-image footer-logo">
 
-      <span class="tru">TRU</span><span class="ways">WAYS</span>
+      <img
+        src="truways-logo.png"
+        alt="TruWays Logistics - Yours Truly"
+        loading="lazy"
+      >
 
-      <small>LOGISTICS</small>
-
-    </div>
+    </a>
 
     <p>Moving Your Business Forward.</p>
 
@@ -1283,10 +1200,7 @@
 
 
   <!-- ==========================================
-       31. FLOATING WHATSAPP BUTTON
-
-       EDIT: WHATSAPP NUMBER BELOW
-
+       30. FLOATING WHATSAPP BUTTON
        ========================================== -->
 
   <a
@@ -1304,7 +1218,7 @@
 
 
   <!-- ==========================================
-       32. JAVASCRIPT FUNCTIONS
+       31. JAVASCRIPT
        ========================================== -->
 
   <script>
@@ -1316,11 +1230,12 @@
 
 
     /* ==========================================
-       QUOTATION FORM FUNCTION
+       ENQUIRY FORM
 
-       Opens the visitor's default email application.
+       This opens the visitor's default email app.
+       It does not send directly from the website.
 
-       EDIT: RECIPIENT EMAIL ADDRESS BELOW
+       EDIT THE RECIPIENT EMAIL BELOW IF REQUIRED.
 
        ========================================== */
 
@@ -1330,8 +1245,6 @@
       function(event) {
 
         event.preventDefault();
-
-        /* COLLECT CUSTOMER INFORMATION */
 
         const name =
           document.getElementById("name").value.trim();
@@ -1346,14 +1259,10 @@
           document.getElementById("message").value.trim();
 
 
-        /* EMAIL SUBJECT */
-
         const subject = encodeURIComponent(
           "Website Quote Enquiry - TruWays Logistics"
         );
 
-
-        /* EMAIL BODY */
 
         const body = encodeURIComponent(
 
@@ -1367,8 +1276,6 @@
 
         );
 
-
-        /* OPEN DEFAULT EMAIL APPLICATION */
 
         window.location.href =
           "mailto:paul@truways.co.za?subject=" +
