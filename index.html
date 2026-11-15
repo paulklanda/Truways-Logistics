@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
   <!-- ==========================================
        1. WEBSITE SETTINGS
        ========================================== -->
@@ -10,7 +11,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="TruWays Logistics provides road freight, transport, courier, local deliveries and customised logistics solutions across South Africa.">
+  <meta name="description" content="TruWays Logistics provides reliable road freight, transport, truck leasing, trailer hire and customised logistics solutions across South Africa.">
 
   <meta name="theme-color" content="#000000">
 
@@ -33,7 +34,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px;
+      scroll-padding-top: 110px;
     }
 
     body {
@@ -55,6 +56,12 @@
 
     /* ==========================================
        3. OFFICIAL TRUWAYS COLOURS
+
+       GREEN  = #33CC33
+       BLACK  = #000000
+       WHITE  = #FFFFFF
+
+       Change colours here if needed.
        ========================================== */
 
     :root {
@@ -71,12 +78,8 @@
        4. COMPANY LOGO
 
        IMPORTANT:
-       Upload your logo into the same folder
-       as index.html.
-
-       Recommended filename:
-       truways-logo.png
-
+       Upload truways-logo.png into the SAME
+       GitHub folder as index.html.
        ========================================== */
 
     .logo-image {
@@ -129,8 +132,6 @@
       object-fit: contain;
     }
 
-    /* Footer fallback must be visible if image fails */
-
     .footer-logo .logo-fallback {
       color: var(--white);
     }
@@ -149,7 +150,6 @@
       color: var(--white);
       padding: 9px 7%;
       font-size: 13px;
-
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -165,16 +165,13 @@
     header {
       background: var(--white);
       padding: 17px 7%;
-
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
-
       position: sticky;
       top: 0;
       z-index: 100;
-
       box-shadow: 0 3px 12px #00000012;
     }
 
@@ -210,6 +207,7 @@
       transition: 0.2s;
       border: none;
       cursor: pointer;
+      text-align: center;
     }
 
     .btn:hover {
@@ -354,7 +352,7 @@
 
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 22px;
     }
 
@@ -543,6 +541,22 @@
       margin: 7px;
     }
 
+    .footer-legal a {
+      color: var(--green);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .footer-legal a:hover {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    .footer-divider {
+      margin: 0 8px;
+      color: #777777;
+    }
+
 
     /* ==========================================
        18. WHATSAPP FLOATING BUTTON
@@ -552,16 +566,12 @@
       position: fixed;
       right: 22px;
       bottom: 22px;
-
       background: var(--green);
       color: var(--black);
-
       padding: 14px 19px;
       border-radius: 40px;
-
       font-weight: bold;
       z-index: 200;
-
       box-shadow: 0 4px 15px #00000033;
       transition: 0.2s;
     }
@@ -599,10 +609,7 @@
       }
 
       .service-grid,
-      .fleet-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .fleet-grid,
       .values {
         grid-template-columns: 1fr;
       }
@@ -655,6 +662,7 @@
 
 <body>
 
+
   <!-- ==========================================
        20. TOP CONTACT BAR
        ========================================== -->
@@ -663,7 +671,10 @@
 
     <span>📍 Kempton Park, Gauteng, South Africa</span>
 
-    <span>📞 067 131 1009 | ✉ paul@truways.co.za</span>
+    <span>
+      📞 <a href="tel:+27671311009" style="color:#FFFFFF;">067 131 1009</a>
+      | ✉ <a href="mailto:paul@truways.co.za" style="color:#FFFFFF;">paul@truways.co.za</a>
+    </span>
 
   </div>
 
@@ -697,13 +708,9 @@
     <nav aria-label="Main navigation">
 
       <a href="#home">Home</a>
-
       <a href="#about">About Us</a>
-
       <a href="#services">Services</a>
-
       <a href="#fleet">Our Fleet</a>
-
       <a href="#contact">Contact</a>
 
     </nav>
@@ -724,12 +731,19 @@
       <h1>Moving Your Business Forward.</h1>
 
       <p>
-        Reliable transport, road freight and delivery solutions
-        designed around your business. Connecting people,
-        businesses and destinations across South Africa.
+        We move more than goods – we move your business forward.
+        We specialise in road freight and transport solutions
+        built around the demands of your business.
+
+        From collection to final destination, we are committed
+        to handling every load with care, delivering on our
+        promises and building lasting partnerships through
+        service you can trust.
       </p>
 
-      <a href="#contact" class="btn">Request a Quote →</a>
+      <a href="#contact" class="btn">
+        Let's Find the Right Solution for You →
+      </a>
 
     </div>
 
@@ -746,7 +760,7 @@
 
       <div>
 
-        <div class="eyebrow">Who We Are</div>
+        <div class="eyebrow">About Us</div>
 
         <h2 class="section-title">
           Logistics That Move You Forward
@@ -755,32 +769,62 @@
         <div class="about-text">
 
           <p>
-            TruWays Logistics (Pty) Ltd is a privately owned
-            logistics company established to provide exceptional
-            logistics solutions.
+            TruWays Logistics is a transport and logistics company
+            committed to providing reliable, efficient and
+            cost-effective road freight solutions tailored to
+            the needs of businesses across various industries.
           </p>
 
           <p>
-            We are committed to delivering customised and
-            efficient solutions that help our customers move
-            forward, while maintaining high standards of service,
-            safety and compliance.
+            We understand that logistics is more than simply
+            moving goods from one destination to another.
+            It is an essential part of business success,
+            connecting suppliers, customers and industries
+            while keeping supply chains moving and business
+            operations running efficiently.
           </p>
 
           <p>
-            TruWays is a 100% black-owned business with
-            B-BBEE Level 1 accreditation.
+            Our approach is centred on understanding our
+            customers' unique requirements and delivering
+            flexible transport solutions that align with their
+            operational demands. Whether through long-term
+            contractual arrangements or ad-hoc transport
+            requirements, we strive to provide dependable
+            service, operational efficiency and value at every stage.
+          </p>
+
+          <p>
+            Driven by professionalism, effective coordination,
+            safety and accountability, we take pride in managing
+            every journey with care and commitment.
+            As a B-BBEE-accredited business, we are proud to
+            contribute to South Africa's economic development
+            while fostering meaningful partnerships and
+            supporting sustainable business growth.
+          </p>
+
+          <p>
+            At TruWays Logistics, we believe successful
+            transportation is built on trust, consistency
+            and commitment. We go beyond moving goods –
+            we create connections, support businesses and
+            keep opportunities moving forward.
           </p>
 
         </div>
 
+
+        <!-- OUR PURPOSE -->
+
         <div class="highlight">
 
-          <strong>Our Mission</strong>
+          <strong>Our Purpose</strong>
 
           <p>
-            To become the preferred logistics solution partner
-            for individuals and organisations.
+            We strive to build lasting partnerships,
+            create value and contribute to the growth
+            and success of the businesses we serve.
           </p>
 
         </div>
@@ -811,38 +855,44 @@
       <h2 class="section-title">Our Vision & Values</h2>
 
       <p class="section-intro">
-        Providing customised logistical solutions and value-added
-        services while delivering an exceptional experience for our clients.
+        Our values are more than words – they define who we are,
+        how we work and the relationships we build. They guide
+        every decision, shape our customer experience and
+        influence how we approach every journey.
       </p>
 
       <div class="values">
 
         <div class="value">
 
-          <strong>Excellence in Delivery</strong>
+          <strong>We Care</strong>
 
           <p>
-            We strive to uphold high standards in every delivery.
+            We value people, build trust and put our
+            customers first.
           </p>
 
         </div>
 
         <div class="value">
 
-          <strong>Compliance</strong>
+          <strong>We Connect</strong>
 
           <p>
-            We are committed to safety and relevant regulatory frameworks.
+            We create meaningful connections that keep
+            businesses and supply chains moving.
           </p>
 
         </div>
 
         <div class="value">
 
-          <strong>Service to Community</strong>
+          <strong>We Deliver</strong>
 
           <p>
-            We aim to contribute positively to our communities.
+            We turn promises into performance, ensuring
+            every journey reflects our commitment to
+            reliability, efficiency and exceptional service.
           </p>
 
         </div>
@@ -865,64 +915,73 @@
     <h2 class="section-title">Our Services</h2>
 
     <p class="section-intro">
-      Practical and customised logistics solutions to support
-      businesses and individuals across South Africa.
+      We provide flexible and dependable transport solutions
+      designed to meet the diverse needs of businesses.
+      Whether you require freight transportation, additional
+      truck capacity or trailer hire, we have solutions to
+      keep your operations moving.
     </p>
 
     <div class="service-grid">
 
       <div class="service-card">
+
         <div class="service-icon">🚛</div>
+
         <h3>Road Freight & Transport</h3>
+
         <p>
-          Dependable road transport solutions for your business
-          and cargo requirements.
+          Reliable and efficient road freight solutions,
+          ensuring your goods are transported safely and
+          professionally to their destination.
         </p>
+
       </div>
 
-      <div class="service-card">
-        <div class="service-icon">📦</div>
-        <h3>Local & Door-to-Door Delivery</h3>
-        <p>
-          Local delivery and convenient door-to-door services
-          to get goods where they need to be.
-        </p>
-      </div>
 
       <div class="service-card">
+
         <div class="service-icon">🚚</div>
-        <h3>Courier & Deliveries</h3>
+
+        <h3>Truck Leasing</h3>
+
         <p>
-          Delivery solutions designed to support your
-          day-to-day business operations.
+          Flexible truck leasing solutions that give your
+          business access to reliable vehicles, increased
+          fleet capacity and the flexibility to meet
+          changing transport demands.
         </p>
+
       </div>
 
-      <div class="service-card">
-        <div class="service-icon">🌍</div>
-        <h3>Clearing & Forwarding</h3>
-        <p>
-          Logistics support for clearing and forwarding
-          requirements.
-        </p>
-      </div>
 
       <div class="service-card">
-        <div class="service-icon">📦</div>
-        <h3>Wrapping & Packaging</h3>
+
+        <div class="service-icon">🚛</div>
+
+        <h3>Trailer Hire</h3>
+
         <p>
-          Packaging and wrapping support to help prepare
-          goods for transportation.
+          Quality trailer hire solutions offering the
+          flexibility and additional capacity your
+          business needs to keep goods moving.
         </p>
+
       </div>
 
+
       <div class="service-card">
+
         <div class="service-icon">🤝</div>
-        <h3>Customised Solutions</h3>
+
+        <h3>Tailored Transport Solutions</h3>
+
         <p>
-          Flexible logistics solutions tailored to your
-          operational and delivery needs.
+          Practical and flexible solutions designed to
+          meet your unique business requirements,
+          optimise operations and keep your business moving.
         </p>
+
       </div>
 
     </div>
@@ -941,49 +1000,57 @@
     <h2 class="section-title">Our Fleet</h2>
 
     <p class="section-intro">
-      A fleet equipped to support a range of freight and
-      transportation requirements.
+      A fleet equipped to support a range of freight
+      and transportation requirements.
     </p>
 
     <div class="fleet-grid">
 
+
+      <!-- TRUCK TRACTOR -->
+
       <div class="fleet-card">
 
-        <h3>Scania G 460 XT</h3>
+        <h3>Truck Tractor</h3>
 
         <ul>
           <li>Tri-axle configuration</li>
           <li>24-ton capacity</li>
-          <li>12m trailer</li>
-          <li>Flat deck trailer</li>
         </ul>
 
       </div>
 
+
+      <!-- 8 TONNER VEHICLES -->
+
       <div class="fleet-card">
 
-        <h3>Isuzu FTR 850 LWB</h3>
+        <h3>8 Tonners</h3>
 
         <ul>
-          <li>8-ton capacity</li>
           <li>Tautliner body</li>
           <li>8.5m high-volume body</li>
           <li>Double-stack pallet capability</li>
           <li>Anti-theft canvas mesh</li>
-        </ul>
-
-      </div>
-
-      <div class="fleet-card">
-
-        <h3>UD Croner LKE 250</h3>
-
-        <ul>
-          <li>8-ton capacity</li>
           <li>Curtain-side body</li>
           <li>6.2m volume body</li>
           <li>Tail lift</li>
           <li>Roll-a-floor pallet system</li>
+        </ul>
+
+      </div>
+
+
+      <!-- TRAILERS -->
+
+      <div class="fleet-card">
+
+        <h3>Trailers</h3>
+
+        <ul>
+          <li>Tri-axle trailers</li>
+          <li>Flatbed with container locks</li>
+          <li>Super-Link Tautliner</li>
         </ul>
 
       </div>
@@ -995,12 +1062,26 @@
 
     <div class="highlight" style="margin-top:30px">
 
-      <strong>Safety & Compliance</strong>
+      <strong>Safety, Security & Operational Control</strong>
 
       <p>
-        Goods in Transit (GIT) insurance of R875,000 and
-        Dangerous Goods Regulations (DGR) compliance,
-        as stated in our company profile.
+        We prioritise the safety and security of every load
+        through Goods in Transit (GIT) insurance, compliance
+        with applicable Dangerous Goods Regulations (DGR),
+        and skilled, trained drivers.
+      </p>
+
+      <p>
+        Every vehicle is equipped with Cartrack vehicle
+        tracking technology, enabling fleet monitoring
+        and enhanced visibility throughout the journey.
+      </p>
+
+      <p>
+        Dedicated WhatsApp communication groups facilitate
+        real-time updates, coordination and communication
+        between drivers, operations teams and relevant
+        stakeholders.
       </p>
 
     </div>
@@ -1017,11 +1098,14 @@
     <h2>Let's Move Your Business Forward.</h2>
 
     <p>
-      Looking for a dependable logistics partner?
-      Let's discuss your transport and delivery needs.
+      Looking for a reliable logistics partner?
+      Let's discuss your transport requirements and
+      explore solutions that keep your business moving.
     </p>
 
-    <a href="#contact" class="btn">Talk to Our Team</a>
+    <a href="#contact" class="btn">
+      Talk to Our Team
+    </a>
 
   </section>
 
@@ -1037,7 +1121,8 @@
     <h2 class="section-title">Let's Talk Logistics</h2>
 
     <p class="section-intro">
-      Contact our team to discuss your requirements or request a quote.
+      Contact our team to discuss your requirements
+      or request a quote.
     </p>
 
     <div class="contact-grid">
@@ -1056,32 +1141,24 @@
         </p>
 
         <p>
-          📞 Paul Landa:
-          <a href="tel:+27671311009">067 131 1009</a>
+          📞 Paul Landa:<br>
+          <a href="tel:+27671311009">
+            067 131 1009
+          </a>
         </p>
 
         <p>
-          📞 Patricia Mulei:
-          <a href="tel:+27633753299">063 375 3299</a>
+          📞 Patricia Mulei:<br>
+          <a href="tel:+27633753299">
+            063 375 3299
+          </a>
         </p>
 
         <p>
-          ✉
+          ✉ Email:<br>
           <a href="mailto:paul@truways.co.za">
             paul@truways.co.za
           </a>
-        </p>
-
-        <p>
-          ✉
-          <a href="mailto:finance@truways.co.za">
-            finance@truways.co.za
-          </a>
-        </p>
-
-        <p>
-          <strong>Company Registration:</strong><br>
-          2021/1366568/07
         </p>
 
         <p>
@@ -1094,11 +1171,15 @@
 
       <!-- ======================================
            28. REQUEST A QUOTE FORM
+
+           This form opens the visitor's email
+           application. It does not send directly
+           from the website.
            ====================================== -->
 
       <div class="contact-form">
 
-        <h3>Request a Quote</h3>
+        <h3>Let's Find the Right Logistics Solution Together.</h3>
 
         <form id="quoteForm">
 
@@ -1109,8 +1190,10 @@
             name="name"
             type="text"
             placeholder="Enter your name"
+            autocomplete="name"
             required
           >
+
 
           <label for="email">Email Address</label>
 
@@ -1119,8 +1202,10 @@
             name="email"
             type="email"
             placeholder="Enter your email"
+            autocomplete="email"
             required
           >
+
 
           <label for="phone">Contact Number</label>
 
@@ -1129,16 +1214,21 @@
             name="phone"
             type="tel"
             placeholder="Enter your number"
+            autocomplete="tel"
           >
 
-          <label for="message">How can we assist?</label>
+
+          <label for="message">
+            Tell Us About Your Requirements
+          </label>
 
           <textarea
             id="message"
             name="message"
-            placeholder="Tell us about your transport or delivery requirements..."
+            placeholder="Tell us about your transport, freight, truck leasing or trailer hire requirements..."
             required
           ></textarea>
+
 
           <button class="btn" type="submit">
             Send Enquiry →
@@ -1179,12 +1269,14 @@
 
     <p>Moving Your Business Forward.</p>
 
-    <p>
+    <p class="footer-legal">
       © <span id="year"></span> TruWays Logistics (Pty) Ltd.
       All rights reserved.
+      <span class="footer-divider">|</span>
+      <a href="terms-and-conditions.html">
+        Terms & Conditions
+      </a>
     </p>
-
-    <p>100% Black-Owned | B-BBEE Level 1</p>
 
   </footer>
 
@@ -1224,6 +1316,7 @@
        Opens the visitor's default email application.
        Does not send directly from the website.
 
+       Change the email address below if needed.
        ========================================== */
 
     document.getElementById("quoteForm").addEventListener(
@@ -1245,9 +1338,11 @@
         const message =
           document.getElementById("message").value.trim();
 
+
         const subject = encodeURIComponent(
           "Website Quote Enquiry - TruWays Logistics"
         );
+
 
         const body = encodeURIComponent(
 
@@ -1260,6 +1355,7 @@
           "\n\nEnquiry: " + message
 
         );
+
 
         window.location.href =
           "mailto:paul@truways.co.za?subject=" +
