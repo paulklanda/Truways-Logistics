@@ -1,31 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <!-- ==========================================
-       1. WEBSITE SETTINGS
-       ========================================== -->
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="description" content="TruWays Logistics provides reliable road freight, transport, truck leasing, trailer hire and customised logistics solutions across South Africa.">
-
   <meta name="theme-color" content="#000000">
-
   <title>TruWays Logistics | Moving Your Business Forward</title>
 
-
-  <!-- ==========================================
-       2. WEBSITE STYLING
-       ========================================== -->
-
   <style>
-
-    /* RESET */
-
     * {
       margin: 0;
       padding: 0;
@@ -53,17 +35,6 @@
       display: block;
     }
 
-
-    /* ==========================================
-       3. OFFICIAL TRUWAYS COLOURS
-
-       GREEN  = #33CC33
-       BLACK  = #000000
-       WHITE  = #FFFFFF
-
-       Change colours here if needed.
-       ========================================== */
-
     :root {
       --green: #33CC33;
       --black: #000000;
@@ -73,14 +44,7 @@
       --border: #DDDDDD;
     }
 
-
-    /* ==========================================
-       4. COMPANY LOGO
-
-       IMPORTANT:
-       Upload truways-logo.png into the SAME
-       GitHub folder as index.html.
-       ========================================== */
+    /* COMPANY LOGO */
 
     .logo-image {
       display: inline-flex;
@@ -95,8 +59,6 @@
       height: auto;
       object-fit: contain;
     }
-
-    /* Fallback logo if image cannot load */
 
     .logo-fallback {
       display: none;
@@ -132,18 +94,25 @@
       object-fit: contain;
     }
 
+    /* CORRECTED FOOTER LOGO COLOURS */
+
     .footer-logo .logo-fallback {
       color: var(--white);
+    }
+
+    .footer-logo .logo-fallback .tru {
+      color: var(--white);
+    }
+
+    .footer-logo .logo-fallback .ways {
+      color: var(--green);
     }
 
     .footer-logo .logo-fallback small {
       color: var(--white);
     }
 
-
-    /* ==========================================
-       5. TOP CONTACT BAR
-       ========================================== */
+    /* TOP CONTACT BAR */
 
     .topbar {
       background: var(--black);
@@ -157,10 +126,7 @@
       gap: 8px;
     }
 
-
-    /* ==========================================
-       6. HEADER AND NAVIGATION
-       ========================================== */
+    /* HEADER AND NAVIGATION */
 
     header {
       background: var(--white);
@@ -192,10 +158,7 @@
       color: var(--green);
     }
 
-
-    /* ==========================================
-       7. BUTTONS
-       ========================================== */
+    /* BUTTONS */
 
     .btn {
       display: inline-block;
@@ -216,10 +179,7 @@
       transform: translateY(-2px);
     }
 
-
-    /* ==========================================
-       8. HERO / HOMEPAGE SECTION
-       ========================================== */
+    /* HERO SECTION */
 
     .hero {
       min-height: 570px;
@@ -266,10 +226,7 @@
       margin-bottom: 30px;
     }
 
-
-    /* ==========================================
-       9. GENERAL SECTIONS
-       ========================================== */
+    /* GENERAL SECTIONS */
 
     .section {
       padding: 85px 8%;
@@ -287,10 +244,7 @@
       margin-bottom: 38px;
     }
 
-
-    /* ==========================================
-       10. ABOUT US
-       ========================================== */
+    /* ABOUT US */
 
     .about-grid {
       display: grid;
@@ -318,10 +272,7 @@
       margin-top: 22px;
     }
 
-
-    /* ==========================================
-       11. COMPANY VALUES
-       ========================================== */
+    /* COMPANY VALUES */
 
     .values {
       display: grid;
@@ -341,10 +292,7 @@
       color: var(--black);
     }
 
-
-    /* ==========================================
-       12. SERVICES
-       ========================================== */
+    /* SERVICES */
 
     .services {
       background: var(--light);
@@ -384,10 +332,7 @@
       color: var(--grey);
     }
 
-
-    /* ==========================================
-       13. OUR FLEET
-       ========================================== */
+    /* OUR FLEET */
 
     .fleet-grid {
       display: grid;
@@ -417,10 +362,7 @@
       margin-bottom: 7px;
     }
 
-
-    /* ==========================================
-       14. PROMOTIONAL BANNER
-       ========================================== */
+    /* PROMOTIONAL BANNER */
 
     .banner {
       background: var(--black);
@@ -439,10 +381,7 @@
       margin-bottom: 25px;
     }
 
-
-    /* ==========================================
-       15. CONTACT SECTION
-       ========================================== */
+    /* CONTACT SECTION */
 
     .contact {
       background: var(--light);
@@ -479,10 +418,7 @@
       color: var(--white);
     }
 
-
-    /* ==========================================
-       16. ENQUIRY FORM
-       ========================================== */
+    /* ENQUIRY FORM */
 
     .contact-form {
       background: var(--white);
@@ -523,10 +459,7 @@
       resize: vertical;
     }
 
-
-    /* ==========================================
-       17. FOOTER
-       ========================================== */
+    /* FOOTER */
 
     footer {
       background: var(--black);
@@ -557,10 +490,7 @@
       color: #777777;
     }
 
-
-    /* ==========================================
-       18. WHATSAPP FLOATING BUTTON
-       ========================================== */
+    /* WHATSAPP BUTTON */
 
     .whatsapp {
       position: fixed;
@@ -581,10 +511,7 @@
       color: var(--green);
     }
 
-
-    /* ==========================================
-       19. MOBILE RESPONSIVENESS
-       ========================================== */
+    /* MOBILE RESPONSIVENESS */
 
     @media (max-width: 800px) {
 
@@ -627,7 +554,6 @@
         justify-content: center;
         text-align: center;
       }
-
     }
 
     @media (max-width: 480px) {
@@ -652,36 +578,25 @@
         right: 15px;
         bottom: 15px;
       }
-
     }
 
   </style>
-
 </head>
-
 
 <body>
 
-
-  <!-- ==========================================
-       20. TOP CONTACT BAR
-       ========================================== -->
+  <!-- TOP CONTACT BAR -->
 
   <div class="topbar">
-
     <span>📍 Kempton Park, Gauteng, South Africa</span>
 
     <span>
       📞 <a href="tel:+27671311009" style="color:#FFFFFF;">067 131 1009</a>
       | ✉ <a href="mailto:paul@truways.co.za" style="color:#FFFFFF;">paul@truways.co.za</a>
     </span>
-
   </div>
 
-
-  <!-- ==========================================
-       21. HEADER WITH COMPANY LOGO
-       ========================================== -->
+  <!-- HEADER AND LOGO -->
 
   <header>
 
@@ -693,8 +608,6 @@
         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
       >
 
-      <!-- FALLBACK LOGO -->
-
       <span class="logo-fallback">
         <span class="tru">Tru</span><span class="ways">Ways</span>
         <small>LOGISTICS</small>
@@ -702,25 +615,17 @@
 
     </a>
 
-
-    <!-- WEBSITE NAVIGATION -->
-
     <nav aria-label="Main navigation">
-
       <a href="#home">Home</a>
       <a href="#about">About Us</a>
       <a href="#services">Services</a>
       <a href="#fleet">Our Fleet</a>
       <a href="#contact">Contact</a>
-
     </nav>
 
   </header>
 
-
-  <!-- ==========================================
-       22. HOMEPAGE / HERO SECTION
-       ========================================== -->
+  <!-- HOMEPAGE / HERO SECTION -->
 
   <section class="hero" id="home">
 
@@ -749,10 +654,7 @@
 
   </section>
 
-
-  <!-- ==========================================
-       23. ABOUT US SECTION
-       ========================================== -->
+  <!-- ABOUT US SECTION -->
 
   <section class="section" id="about">
 
@@ -814,9 +716,6 @@
 
         </div>
 
-
-        <!-- OUR PURPOSE -->
-
         <div class="highlight">
 
           <strong>Our Purpose</strong>
@@ -830,7 +729,6 @@
         </div>
 
       </div>
-
 
       <!-- ABOUT US IMAGE -->
 
@@ -846,7 +744,6 @@
       </div>
 
     </div>
-
 
     <!-- COMPANY VALUES -->
 
@@ -864,37 +761,28 @@
       <div class="values">
 
         <div class="value">
-
           <strong>We Care</strong>
-
           <p>
             We value people, build trust and put our
             customers first.
           </p>
-
         </div>
 
         <div class="value">
-
           <strong>We Connect</strong>
-
           <p>
             We create meaningful connections that keep
             businesses and supply chains moving.
           </p>
-
         </div>
 
         <div class="value">
-
           <strong>We Deliver</strong>
-
           <p>
             We turn promises into performance, ensuring
             every journey reflects our commitment to
             reliability, efficiency and exceptional service.
           </p>
-
         </div>
 
       </div>
@@ -902,471 +790,3 @@
     </div>
 
   </section>
-
-
-  <!-- ==========================================
-       24. SERVICES SECTION
-       ========================================== -->
-
-  <section class="section services" id="services">
-
-    <div class="eyebrow">What We Do</div>
-
-    <h2 class="section-title">Our Services</h2>
-
-    <p class="section-intro">
-      We provide flexible and dependable transport solutions
-      designed to meet the diverse needs of businesses.
-      Whether you require freight transportation, additional
-      truck capacity or trailer hire, we have solutions to
-      keep your operations moving.
-    </p>
-
-    <div class="service-grid">
-
-      <div class="service-card">
-
-        <div class="service-icon">🚛</div>
-
-        <h3>Road Freight & Transport</h3>
-
-        <p>
-          Reliable and efficient road freight solutions,
-          ensuring your goods are transported safely and
-          professionally to their destination.
-        </p>
-
-      </div>
-
-
-      <div class="service-card">
-
-        <div class="service-icon">🚚</div>
-
-        <h3>Truck Leasing</h3>
-
-        <p>
-          Flexible truck leasing solutions that give your
-          business access to reliable vehicles, increased
-          fleet capacity and the flexibility to meet
-          changing transport demands.
-        </p>
-
-      </div>
-
-
-      <div class="service-card">
-
-        <div class="service-icon">🚛</div>
-
-        <h3>Trailer Hire</h3>
-
-        <p>
-          Quality trailer hire solutions offering the
-          flexibility and additional capacity your
-          business needs to keep goods moving.
-        </p>
-
-      </div>
-
-
-      <div class="service-card">
-
-        <div class="service-icon">🤝</div>
-
-        <h3>Tailored Transport Solutions</h3>
-
-        <p>
-          Practical and flexible solutions designed to
-          meet your unique business requirements,
-          optimise operations and keep your business moving.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ==========================================
-       25. OUR FLEET
-       ========================================== -->
-
-  <section class="section" id="fleet">
-
-    <div class="eyebrow">Our Capabilities</div>
-
-    <h2 class="section-title">Our Fleet</h2>
-
-    <p class="section-intro">
-      A fleet equipped to support a range of freight
-      and transportation requirements.
-    </p>
-
-    <div class="fleet-grid">
-
-
-      <!-- TRUCK TRACTOR -->
-
-      <div class="fleet-card">
-
-        <h3>Truck Tractor</h3>
-
-        <ul>
-          <li>Tri-axle configuration</li>
-          <li>24-ton capacity</li>
-        </ul>
-
-      </div>
-
-
-      <!-- 8 TONNER VEHICLES -->
-
-      <div class="fleet-card">
-
-        <h3>8 Tonners</h3>
-
-        <ul>
-          <li>Tautliner body</li>
-          <li>8.5m high-volume body</li>
-          <li>Double-stack pallet capability</li>
-          <li>Anti-theft canvas mesh</li>
-          <li>Curtain-side body</li>
-          <li>6.2m volume body</li>
-          <li>Tail lift</li>
-          <li>Roll-a-floor pallet system</li>
-        </ul>
-
-      </div>
-
-
-      <!-- TRAILERS -->
-
-      <div class="fleet-card">
-
-        <h3>Trailers</h3>
-
-        <ul>
-          <li>Tri-axle trailers</li>
-          <li>Flatbed with container locks</li>
-          <li>Super-Link Tautliner</li>
-        </ul>
-
-      </div>
-
-    </div>
-
-
-    <!-- SAFETY AND COMPLIANCE -->
-
-    <div class="highlight" style="margin-top:30px">
-
-      <strong>Safety, Security & Operational Control</strong>
-
-      <p>
-        We prioritise the safety and security of every load
-        through Goods in Transit (GIT) insurance, compliance
-        with applicable Dangerous Goods Regulations (DGR),
-        and skilled, trained drivers.
-      </p>
-
-      <p>
-        Every vehicle is equipped with Cartrack vehicle
-        tracking technology, enabling fleet monitoring
-        and enhanced visibility throughout the journey.
-      </p>
-
-      <p>
-        Dedicated WhatsApp communication groups facilitate
-        real-time updates, coordination and communication
-        between drivers, operations teams and relevant
-        stakeholders.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- ==========================================
-       26. PROMOTIONAL BANNER
-       ========================================== -->
-
-  <section class="banner">
-
-    <h2>Let's Move Your Business Forward.</h2>
-
-    <p>
-      Looking for a reliable logistics partner?
-      Let's discuss your transport requirements and
-      explore solutions that keep your business moving.
-    </p>
-
-    <a href="#contact" class="btn">
-      Talk to Our Team
-    </a>
-
-  </section>
-
-
-  <!-- ==========================================
-       27. CONTACT SECTION
-       ========================================== -->
-
-  <section class="section contact" id="contact">
-
-    <div class="eyebrow">Get In Touch</div>
-
-    <h2 class="section-title">Let's Talk Logistics</h2>
-
-    <p class="section-intro">
-      Contact our team to discuss your requirements
-      or request a quote.
-    </p>
-
-    <div class="contact-grid">
-
-
-      <!-- COMPANY CONTACT INFORMATION -->
-
-      <div class="contact-info">
-
-        <h3>Contact Information</h3>
-
-        <p>
-          📍 37 Dundlin, Terenure Drive,<br>
-          Kempton Park, Gauteng,<br>
-          South Africa
-        </p>
-
-        <p>
-          📞 Paul Landa:<br>
-          <a href="tel:+27671311009">
-            067 131 1009
-          </a>
-        </p>
-
-        <p>
-          📞 Patricia Mulei:<br>
-          <a href="tel:+27633753299">
-            063 375 3299
-          </a>
-        </p>
-
-        <p>
-          ✉ Email:<br>
-          <a href="mailto:paul@truways.co.za">
-            paul@truways.co.za
-          </a>
-        </p>
-
-        <p>
-          <strong>Coverage:</strong><br>
-          South Africa
-        </p>
-
-      </div>
-
-
-      <!-- ======================================
-           28. REQUEST A QUOTE FORM
-
-           This form opens the visitor's email
-           application. It does not send directly
-           from the website.
-           ====================================== -->
-
-      <div class="contact-form">
-
-        <h3>Let's Find the Right Logistics Solution Together.</h3>
-
-        <form id="quoteForm">
-
-          <label for="name">Your Name</label>
-
-          <input
-            id="name"
-            name="name"
-            type="text"
-            placeholder="Enter your name"
-            autocomplete="name"
-            required
-          >
-
-
-          <label for="email">Email Address</label>
-
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Enter your email"
-            autocomplete="email"
-            required
-          >
-
-
-          <label for="phone">Contact Number</label>
-
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            placeholder="Enter your number"
-            autocomplete="tel"
-          >
-
-
-          <label for="message">
-            Tell Us About Your Requirements
-          </label>
-
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Tell us about your transport, freight, truck leasing or trailer hire requirements..."
-            required
-          ></textarea>
-
-
-          <button class="btn" type="submit">
-            Send Enquiry →
-          </button>
-
-        </form>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ==========================================
-       29. FOOTER WITH COMPANY LOGO
-       ========================================== -->
-
-  <footer>
-
-    <a href="#home" class="logo-image footer-logo">
-
-      <img
-        src="./truways-logo.png"
-        alt="TruWays Logistics - Yours Truly"
-        loading="lazy"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-      >
-
-      <!-- FALLBACK FOOTER LOGO -->
-
-      <span class="logo-fallback">
-        <span class="tru">Tru</span><span class="ways">Ways</span>
-        <small>LOGISTICS</small>
-      </span>
-
-    </a>
-
-    <p>Moving Your Business Forward.</p>
-
-    <p class="footer-legal">
-      © <span id="year"></span> TruWays Logistics (Pty) Ltd.
-      All rights reserved.
-      <span class="footer-divider">|</span>
-      <a href="terms-and-conditions.html">
-        Terms & Conditions
-      </a>
-    </p>
-
-  </footer>
-
-
-  <!-- ==========================================
-       30. FLOATING WHATSAPP BUTTON
-       ========================================== -->
-
-  <a
-    class="whatsapp"
-    href="https://wa.me/27671311009?text=Hello%20TruWays%20Logistics%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Contact TruWays Logistics on WhatsApp"
-  >
-
-    WhatsApp Us
-
-  </a>
-
-
-  <!-- ==========================================
-       31. JAVASCRIPT
-       ========================================== -->
-
-  <script>
-
-    /* AUTOMATIC COPYRIGHT YEAR */
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-
-    /* ==========================================
-       ENQUIRY FORM
-
-       Opens the visitor's default email application.
-       Does not send directly from the website.
-
-       Change the email address below if needed.
-       ========================================== */
-
-    document.getElementById("quoteForm").addEventListener(
-      "submit",
-
-      function(event) {
-
-        event.preventDefault();
-
-        const name =
-          document.getElementById("name").value.trim();
-
-        const email =
-          document.getElementById("email").value.trim();
-
-        const phone =
-          document.getElementById("phone").value.trim();
-
-        const message =
-          document.getElementById("message").value.trim();
-
-
-        const subject = encodeURIComponent(
-          "Website Quote Enquiry - TruWays Logistics"
-        );
-
-
-        const body = encodeURIComponent(
-
-          "Name: " + name +
-
-          "\nEmail: " + email +
-
-          "\nPhone: " + phone +
-
-          "\n\nEnquiry: " + message
-
-        );
-
-
-        window.location.href =
-          "mailto:paul@truways.co.za?subject=" +
-          subject + "&body=" + body;
-
-      }
-
-    );
-
-  </script>
-
-</body>
-
-</html>
